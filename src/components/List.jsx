@@ -16,11 +16,11 @@ class List extends Component {
   }
 
   render() {
-    console.log('RENDERING List!');
+    console.log('RENDERING list: ', this.props.list);
 
     return (
       <ul>
-        {this.props.list.map(listItem => <li>{listItem}</li>)}
+        {this.props.list.map(listItem => <li key={listItem}>{listItem}</li>)}
       </ul>
     );
   }

@@ -5,18 +5,13 @@ import { connect } from 'react-redux';
 import { toggleBoolean } from '../modules/pointless_boolean.js';
 
 class PointlessThing extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleToggle = this.handleToggle.bind(this);
-  }
-
-  handleToggle() {
+  handleToggle = () => {
     this.props.toggleBoolean(this.props.pointless_boolean);
   }
 
   render() {
-    console.log(this.props)
+    console.log('RENDERING boolean: ', this.props.pointless_boolean);
+
     return (
       <div>
         <p onClick={this.handleToggle}>Pointless boolean: {this.props.pointless_boolean.toString()}</p>
