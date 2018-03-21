@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+    <h1
+      className="App-title"
+    >
+      Welcome to Reselect
+    </h1>
+  </header>
+  <main>
+    <div>
+      <button
+        className="button"
+        onClick={[Function]}
+      >
+        Pointless boolean: 
+        false
+      </button>
+    </div>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      Reorder Lists
+    </button>
+    <label
+      className="label"
+    >
+      Book List
+    </label>
+    <div
+      className="card"
+    >
+      <ul>
+        <li>
+          Clean Code
+        </li>
+        <li>
+          The Pragmatic Programmer
+        </li>
+        <li>
+          You Don't Know JS
+        </li>
+        <li>
+          Eloquent JavaScript
+        </li>
+      </ul>
+    </div>
+    <label
+      className="label"
+    >
+      Author List
+    </label>
+    <div
+      className="card"
+    >
+      <ul>
+        <li>
+          Robert C. Martin
+        </li>
+        <li>
+          Andrew Hunt
+        </li>
+        <li>
+          Kyle Simpson
+        </li>
+        <li>
+          Marijn Haverbeke
+        </li>
+      </ul>
+    </div>
+  </main>
+</div>
+`;

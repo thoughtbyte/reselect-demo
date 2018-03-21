@@ -1,4 +1,4 @@
-const TOGGLE_BOOLEAN = 'TOGGLE_BOOLEAN';
+export const TOGGLE_BOOLEAN = "TOGGLE_BOOLEAN";
 
 export function toggleBoolean(currentVal) {
   return {
@@ -8,9 +8,9 @@ export function toggleBoolean(currentVal) {
 }
 
 export default function reducer(state = true, action) {
+  console.log("ACTION IN BOOLEAN REDUCER: ", action.type);
   switch (action.type) {
     case TOGGLE_BOOLEAN:
-      console.log(action);
       return !action.val;
     default:
       return state;

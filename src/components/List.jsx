@@ -1,39 +1,18 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { setList } from '../modules/list.js';
-import { getDerivedList } from '../selectors.js';
+const List = ({ list }) => {
+  console.log("RENDERING List");
 
-class List extends Component {
-  componentDidMount() {
-    this.props.setList([
-      'rfrfwrft',
-      'sdfsdfsdf',
-      'dsfs8rnlkmfm',
-      'fpojgioeihjvpos[kf',
-    ])
-  }
+  return (
+    <div className="card">
+      <ul>{list.map(listItem => <li key={listItem}>{listItem}</li>)}</ul>
+    </div>
+  );
+};
 
-  render() {
-    console.log('RENDERING list: ', this.props.list);
+List.propTypes = {
+  list: PropTypes.array.isRequired,
+};
 
-    return (
-      <ul>
-        {this.props.list.map(listItem => <li key={listItem}>{listItem}</li>)}
-      </ul>
-    );
-  }
-}
-
-function mapStateToProps(state) {
-  return {
-    list: state.list.map(item => item.toUpperCase()),
-  };
-}
-
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({ setList }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(List);
+export default List;

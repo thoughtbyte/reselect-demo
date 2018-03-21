@@ -1,20 +1,22 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
-import { toggleBoolean } from '../modules/pointless_boolean.js';
+import { toggleBoolean } from "../globalState/pointlessBoolean.js";
 
 class PointlessThing extends Component {
   handleToggle = () => {
-    this.props.toggleBoolean(this.props.pointless_boolean);
-  }
+    this.props.toggleBoolean(this.props.pointlessBoolean);
+  };
 
   render() {
-    console.log('RENDERING boolean: ', this.props.pointless_boolean);
+    console.log("RENDERING PointlessThing");
 
     return (
       <div>
-        <p onClick={this.handleToggle}>Pointless boolean: {this.props.pointless_boolean.toString()}</p>
+        <button className="button" onClick={this.handleToggle}>
+          Pointless boolean: {this.props.pointlessBoolean.toString()}
+        </button>
       </div>
     );
   }
@@ -22,11 +24,11 @@ class PointlessThing extends Component {
 
 function mapStateToProps(state) {
   return {
-    pointless_boolean: state.pointlessBoolean,
+    pointlessBoolean: state.pointlessBoolean,
   };
 }
 
-function mapDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch) {
   return bindActionCreators({ toggleBoolean }, dispatch);
 }
 

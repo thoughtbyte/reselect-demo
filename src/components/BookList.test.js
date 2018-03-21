@@ -1,15 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import renderer from "react-test-renderer";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 
-import App from "./App";
+import BookList from "./BookList";
 
 const middlewares = []; // in case you need to use one you can just import it and add it here
 const mockStore = configureStore(middlewares);
 const initialState = {
-  pointlessBoolean: false,
   bookList: [
     { bookTitle: "Clean Code", authorName: "Robert C. Martin" },
     { bookTitle: "The Pragmatic Programmer", authorName: "Andrew Hunt" },
@@ -19,25 +17,16 @@ const initialState = {
 };
 const store = mockStore(initialState);
 
-describe("App", () => {
-  test("renders without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(
-      <Provider store={store}>
-        <App />
-      </Provider>,
-      div
-    );
-  });
+describe("BookList", () => {
   test("should match snapshot", () => {
-    const app = renderer
+    const bookList = renderer
       .create(
         <Provider store={store}>
-          <App />
+          <BookList />
         </Provider>
       )
       .toJSON();
 
-    expect(app).toMatchSnapshot();
+    expect(bookList).toMatchSnapshot();
   });
 });

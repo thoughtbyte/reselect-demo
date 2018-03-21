@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should match snapshot 1`] = `
+<div
+  className="card"
+>
+  <ul>
+    <li>
+      Clean Code
+    </li>
+    <li>
+      The Pragmatic Programmer
+    </li>
+    <li>
+      You Don't Know JS
+    </li>
+    <li>
+      Eloquent JavaScript
+    </li>
+  </ul>
+</div>
+`;

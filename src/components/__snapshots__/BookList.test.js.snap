@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookList should match snapshot 1`] = `
+Array [
+  <label
+    className="label"
+>
+    Book List
+</label>,
+  <div
+    className="card"
+>
+    <ul>
+        <li>
+            Clean Code
+        </li>
+        <li>
+            The Pragmatic Programmer
+        </li>
+        <li>
+            You Don't Know JS
+        </li>
+        <li>
+            Eloquent JavaScript
+        </li>
+    </ul>
+</div>,
+]
+`;

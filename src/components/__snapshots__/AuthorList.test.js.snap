@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorList should match snapshot 1`] = `
+Array [
+  <label
+    className="label"
+>
+    Author List
+</label>,
+  <div
+    className="card"
+>
+    <ul>
+        <li>
+            Robert C. Martin
+        </li>
+        <li>
+            Andrew Hunt
+        </li>
+        <li>
+            Kyle Simpson
+        </li>
+        <li>
+            Marijn Haverbeke
+        </li>
+    </ul>
+</div>,
+]
+`;
