@@ -9,6 +9,8 @@ import "./index.css";
 
 const store = createStore(rootReducer);
 
+console.log = (...args) => {};
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

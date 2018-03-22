@@ -3,10 +3,11 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import List from "./List";
+import { getTitles } from "../globalState/bookList";
 
 class BookList extends Component {
   render() {
-    console.log("RENDERING BookList");
+    console.warn("RENDERING BookList");
 
     return (
       <Fragment>
@@ -23,7 +24,7 @@ BookList.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    list: state.bookList.map(item => item.bookTitle),
+    list: getTitles(state),
   };
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const List = ({ list }) => {
-  console.log("RENDERING List");
+  console.warn("RENDERING List");
 
   return (
     <div className="card">

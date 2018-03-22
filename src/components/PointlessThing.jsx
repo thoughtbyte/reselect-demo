@@ -10,7 +10,7 @@ class PointlessThing extends Component {
   };
 
   render() {
-    console.log("RENDERING PointlessThing");
+    console.warn("RENDERING PointlessThing");
 
     return (
       <div>

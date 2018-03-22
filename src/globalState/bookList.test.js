@@ -1,4 +1,13 @@
-import reducer, { SET_LIST, setList } from "./bookList";
+import reducer, { SET_LIST, setList, getAuthors, getTitles } from "./bookList";
+
+const state = {
+  bookList: [
+    { bookTitle: "Clean Code", authorName: "Robert C. Martin" },
+    { bookTitle: "The Pragmatic Programmer", authorName: "Andrew Hunt" },
+    { bookTitle: "You Don't Know JS", authorName: "Kyle Simpson" },
+    { bookTitle: "Eloquent JavaScript", authorName: "Marijn Haverbeke" },
+  ],
+};
 
 describe("bookList state", () => {
   test("setList() should create an action to set list", () => {
@@ -18,6 +27,22 @@ describe("bookList state", () => {
     };
     expect(reducer([], action)).toEqual(action.list);
   });
-  test.skip("getAuthors() selector should return authors", () => {});
-  test.skip("getTitles() selector should return titles", () => {});
+  test("getAuthors() selector should return authors", () => {
+    const expected = [
+      "Robert C. Martin",
+      "Andrew Hunt",
+      "Kyle Simpson",
+      "Marijn Haverbeke",
+    ];
+    expect(getAuthors(state)).toEqual(expected);
+  });
+  test("getTitles() selector should return titles", () => {
+    const expected = [
+      "Clean Code",
+      "The Pragmatic Programmer",
+      "You Don't Know JS",
+      "Eloquent JavaScript",
+    ];
+    expect(getTitles(state)).toEqual(expected);
+  });
 });
