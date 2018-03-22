@@ -8,7 +8,7 @@ export function setList(list) {
 }
 
 export default function reducer(state = [], action) {
-  console.log("ACTION IN LIST REDUCER:", action.type);
+  console.log("LIST REDUCER:", action.type);
   switch (action.type) {
     case SET_LIST:
       return action.list;
