@@ -10,7 +10,7 @@ export function setList(list) {
 }
 
 export default function reducer(state = [], action) {
-  console.info("ACTION IN LIST REDUCER:", action.type);
+  console.info("LIST REDUCER:", action.type);
   switch (action.type) {
     case SET_LIST:
       return action.list;

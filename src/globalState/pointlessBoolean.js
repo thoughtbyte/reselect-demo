@@ -8,7 +8,7 @@ export function toggleBoolean(currentVal) {
 }
 
 export default function reducer(state = true, action) {
-  console.info("ACTION IN BOOLEAN REDUCER: ", action.type);
+  console.info("BOOLEAN REDUCER:", action.type);
   switch (action.type) {
     case TOGGLE_BOOLEAN:
       return !action.val;
