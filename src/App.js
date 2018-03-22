@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   reorderList = () => {
-    this.props.setList(list.sort(() => 0.5 - Math.random()));
+    this.props.setList([...list.sort(() => 0.5 - Math.random())]);
   };
 
   render() {
